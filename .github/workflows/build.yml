@@ -213,6 +213,12 @@ jobs:
           use-cross: true
           command: build
           args: --verbose --release --target ${{ matrix.platform.target }}
+      - name: list result files (debug)
+        shell: bash
+        run: |
+          find target | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
+
+
       - name: Build archive
         shell: bash
         run: |
