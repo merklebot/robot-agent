@@ -216,7 +216,7 @@ jobs:
       - name: Build archive
         shell: bash
         run: |
-          binary_name="robot-agent"
+          binary_name="robotagent"
 
           dirname="$binary_name-${{ env.VERSION }}-${{ matrix.platform.target }}"
           mkdir "$dirname"
